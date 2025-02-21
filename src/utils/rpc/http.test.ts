@@ -57,7 +57,7 @@ describe('request', () => {
       {
         "error": {
           "code": -32602,
-          "message": "Odd number of digits",
+          "message": "odd number of digits",
         },
         "id": 5,
         "jsonrpc": "2.0",
@@ -452,7 +452,7 @@ describe('http (batch)', () => {
         {
           "error": {
             "code": -32602,
-            "message": "Odd number of digits",
+            "message": "odd number of digits",
           },
           "id": 97,
           "jsonrpc": "2.0",
