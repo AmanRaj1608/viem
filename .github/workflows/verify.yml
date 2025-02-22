@@ -1,5 +1,8 @@
 name: Verify
 on:
+  push:
+    branches:
+      - test-debug2
   workflow_call:
   workflow_dispatch:
 
