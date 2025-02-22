@@ -22,21 +22,9 @@ export default async function () {
   // We still need to remember to reset the anvil instance between test files. This is generally
   // handled in `setup.ts` but may require additional resetting (e.g. via `afterAll`), in case of
   // any custom per-test adjustments that persist beyond `anvil_reset`.
-  let count = 0
-  const run = async (c = 0) => {
-    try {
-      const shutdown = await Promise.all([
-        ...Object.values(executionInstances).map((instance) =>
-          instance.start(),
-        ),
-        ...Object.values(bundlerInstances).map((instance) => instance.start()),
-      ])
-      return () => Promise.all(shutdown.map((fn) => fn()))
-    } catch (err) {
-      if (c < 3) return run(++count)
-      console.error(`Failed to start anvil instances: ${err.message}`)
-      throw err
-    }
-  }
-  await run()
+  const shutdown = await Promise.all([
+    ...Object.values(executionInstances).map((instance) => instance.start()),
+    ...Object.values(bundlerInstances).map((instance) => instance.start()),
+  ])
+  return () => Promise.all(shutdown.map((fn) => fn()))
 }

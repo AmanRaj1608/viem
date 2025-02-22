@@ -79,8 +79,8 @@ importers:
         specifier: ^0.2.14
         version: 0.2.14
       prool:
-        specifier: 0.0.18
-        version: 0.0.18(@pimlico/alto@0.0.4(typescript@5.6.2))
+        specifier: 0.0.22
+        version: 0.0.22(@pimlico/alto@0.0.4(typescript@5.6.2))
       publint:
         specifier: ^0.2.11
         version: 0.2.11
@@ -4532,8 +4532,8 @@ packages:
     resolution: {integrity: sha512-sF308EhTenb/pDRPakm+WgiN+VdM/T1RaHj1x+MvAuT8UiQP8JmOEbxVqtkbfR4LrvOg5n7ic01kRBDGXjYikA==}
     engines: {node: '>=10'}
 
-  prool@0.0.18:
-    resolution: {integrity: sha512-pMszBzVUtRs1PgfolsSTbWVaZJy6gq1EGUjKGpO8ERMTwjolFOcdN96TdHybGW5Vcdp2lgcaPitu9FpAY0qliA==}
+  prool@0.0.22:
+    resolution: {integrity: sha512-JkamcRUbAm1FPN2VtFnm4nc9tqdIdB0iI4uyQR1fRmjEsmSD36o2e8J7Dv6gQtItnBmM6V1l5d0M4FirT5+5TQ==}
     engines: {node: '>=22'}
     peerDependencies:
       '@pimlico/alto': '*'
@@ -10249,7 +10249,7 @@ snapshots:
     dependencies:
       tdigest: 0.1.2
 
-  prool@0.0.18(@pimlico/alto@0.0.4(typescript@5.6.2)):
+  prool@0.0.22(@pimlico/alto@0.0.4(typescript@5.6.2)):
     dependencies:
       change-case: 5.4.4
       eventemitter3: 5.0.1
